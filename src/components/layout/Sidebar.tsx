@@ -10,7 +10,8 @@ import {
   Clock,
   StickyNote,
   Settings,
-  GraduationCap
+  GraduationCap,
+  Brain
 } from 'lucide-react';
 
 const navigation = [
@@ -20,6 +21,7 @@ const navigation = [
   { name: 'Study Sessions', href: '/study', icon: Clock },
   { name: 'Goals', href: '/goals', icon: Target },
   { name: 'Notes', href: '/notes', icon: StickyNote },
+  { name: 'Exercises', href: '/exercises', icon: Brain },
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];

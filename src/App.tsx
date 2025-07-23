@@ -8,8 +8,9 @@ import Dashboard from "./pages/Dashboard";
 import Topics from "./pages/Topics";
 import PDFLibrary from "./pages/PDFLibrary";
 import StudySession from "./pages/StudySession";
-import Goals from "./pages/Goals";
-import Notes from "./pages/Notes";
+import { EnhancedNotesPage } from "./components/notes/EnhancedNotesPage";
+import Exercises from "./pages/Exercises";
+import EnhancedGoals from "./pages/EnhancedGoals";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
@@ -28,8 +29,9 @@ const App = () => (
             <Route path="topics" element={<Topics />} />
             <Route path="pdfs" element={<PDFLibrary />} />
             <Route path="study" element={<StudySession />} />
-            <Route path="goals" element={<Goals />} />
-            <Route path="notes" element={<Notes />} />
+            <Route path="goals" element={<EnhancedGoals />} />
+            <Route path="notes" element={<EnhancedNotesPage />} />
+            <Route path="exercises" element={<Exercises />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="settings" element={<Settings />} />
           </Route>
