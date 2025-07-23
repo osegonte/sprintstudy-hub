@@ -2,41 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* StudySprint 4.0 Design System - Academic Focus Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core academic color palette */
+    --background: 250 100% 99%;
+    --foreground: 222 47% 11%;
 
+    /* Card and surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
+    --card-hover: 240 100% 98%;
 
+    /* Popover colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep academic blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 217 20% 94%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft focus blue */
+    --secondary: 240 15% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-hover: 240 20% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Success - Calming green for achievements */
+    --success: 158 64% 52%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 158 30% 95%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warning - Warm amber for attention */
+    --warning: 48 96% 53%;
+    --warning-foreground: 222 47% 11%;
+    --warning-muted: 48 50% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Muted colors for subtle elements */
+    --muted: 240 15% 96%;
+    --muted-foreground: 240 6% 50%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Accent - Energizing purple for highlights */
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 262 30% 95%;
 
-    --radius: 0.5rem;
+    /* Focus - Deep teal for study sessions */
+    --focus: 184 77% 34%;
+    --focus-foreground: 0 0% 100%;
+    --focus-muted: 184 25% 94%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and input */
+    --border: 240 15% 91%;
+    --input: 240 15% 96%;
+    --ring: 217 91% 60%;
+
+    /* Gradients for visual interest */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 52%), hsl(184 77% 34%));
+    --gradient-focus: linear-gradient(135deg, hsl(184 77% 34%), hsl(217 91% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(240 100% 99%), hsl(240 15% 98%));
+
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px hsl(240 15% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(240 15% 15% / 0.1), 0 2px 4px -1px hsl(240 15% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(240 15% 15% / 0.1), 0 4px 6px -2px hsl(240 15% 15% / 0.05);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+
+    /* Border radius */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +95,55 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode academic theme */
+    --background: 222 47% 6%;
+    --foreground: 240 100% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 240 100% 98%;
+    --card-hover: 222 47% 10%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 240 100% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 47% 6%;
+    --primary-muted: 217 30% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 15% 12%;
+    --secondary-foreground: 240 100% 98%;
+    --secondary-hover: 240 15% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --success: 158 64% 55%;
+    --success-foreground: 222 47% 6%;
+    --success-muted: 158 30% 12%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --warning: 48 96% 58%;
+    --warning-foreground: 222 47% 6%;
+    --warning-muted: 48 50% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --muted: 240 15% 12%;
+    --muted-foreground: 240 15% 65%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --accent: 262 83% 65%;
+    --accent-foreground: 222 47% 6%;
+    --accent-muted: 262 30% 15%;
+
+    --focus: 184 77% 40%;
+    --focus-foreground: 222 47% 6%;
+    --focus-muted: 184 25% 15%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 222 47% 6%;
+
+    --border: 240 15% 18%;
+    --input: 240 15% 12%;
+    --ring: 217 91% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(262 83% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 55%), hsl(184 77% 40%));
+    --gradient-focus: linear-gradient(135deg, hsl(184 77% 40%), hsl(217 91% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 6%), hsl(240 15% 8%));
   }
 }
 
@@ -100,6 +153,31 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" auto;
+  }
+}
+
+@layer components {
+  /* Study-focused utility classes */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-focus {
+    background: var(--gradient-focus);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .study-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .study-card:hover {
+    @apply shadow-lg;
   }
 }
